@@ -1,0 +1,65 @@
+#+PROJECT Mysteriousness -*- mode: org -*-
+#+AUTHOR Samuel Hibbard
+#+DATE 2015-09-21 Mon
+
+* Mysteriousness
+
+** Problem 1
+
+** Problem 2
+   
+   | word    | vowels | consonants | score | notes |
+   |---------+--------+------------+-------+-------|
+   | PLUM    | U      | P L M      |    36 |       |
+   | ROME    | O E    | R M        |    98 |       |
+   | LAME    | A E    | L M        |    18 |       |
+   | PIPER   | I E    | P P R      |   110 |       |
+   | MELBA   | E A    | M L B      |    51 |       |
+   | PLUME   | U E    | P L M      |    48 |       |
+   | SAVE    | A E    | S V        |    51 |       |
+   | PLANE   | A E    | P L N      |    39 |       |
+   | OUT     | O U    | T          |    81 |       |
+   | WESTERN | E E    | W S T R N  |    70 |       |
+   | MELT    | E      | M L T      |    15 |       |
+   | WEST    | E      | W S T      |    20 |       |
+   | VIPER   | I E    | V P R      |   150 |       |
+   | GREET   | E E    | G R T      |    40 |       |
+   | PAPER   | A E    | P P R      |    66 |       |
+
+   | letters | value |
+   |---------+-------|
+   | E       | 1     |
+   | T       | 3 9   |
+   | O U     | 27 9  |
+   | A       |       |
+   | I       |       |
+   |         |       |
+   |         |       |
+
+   | vowels | num | constants | num |
+   |--------+-----+-----------+-----|
+   | A      |   5 | P         |   8 |
+   | E      |  15 | L         |   6 |
+   | I      |   2 | M         |   6 |
+   | O      |   2 | R         |   6 |
+   | U      |   3 | B         |   1 |
+   |        |     | S         |   3 |
+   |        |     | V         |   2 |
+   |        |     | N         |   2 |
+   |        |     | T         |   5 |
+   |        |     | W         |   2 |
+   |        |     | G         |   1 |
+
+   | constants | num | values |
+   |-----------+-----+--------|
+   | P         |   8 |        |
+   | L         |   6 |        |
+   | M         |   6 |        |
+   | R         |   6 |        |
+   | B         |   1 |        |
+   | S         |   3 |        |
+   | V         |   2 |        |
+   | N         |   2 |        |
+   | T         |   5 |        |
+   | W         |   2 |        |
+   | G         |   1 |        |
