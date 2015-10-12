@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Mysteriousness -*- mode:org -*-</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2015/10/10 11:32:52"/>
+<meta name="author" content="Rick Neff"/>
+<style type="text/css">
+  html {
+	font-family: Times, serif;
+	font-size: 12pt;
+  }
+  .title { text-align: center; }
+  .todo  { color: red; }
+  .done { color: green; }
+  .timestamp { color: grey }
+  .timestamp-kwd { color: CadetBlue }
+  .tag { background-color:lightblue; font-weight:normal }
+  .target { background-color: lavender; }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+  }
+  table { border-collapse: collapse; }
+  td, th {
+	vertical-align: top;
+	<!--border: 1pt solid #ADB9CC;-->
+  }
+</style>
+</head><body>
+<h1 class="title">Mysteriousness -*- mode:org -*-</h1>
+
+<h2>EN9</h2>
+
+
+<p>
+You are invited to identify different algorithmic approaches to
+solving problems, and to compare and contrast these approaches using
+a variety of criteria. This invitation to exploration is codenamed
+<i>Mysteriousness</i>.
+</p>
+
+<h3>Requirements</h3>
+
+
+<p>
+Working with the members of your cohort only (no inter-cohort
+collaboration), using Brother Neff as your only other human
+resource, and using any non-human resources available to you,
+create algorithms to solve the following three problems:
+</p>
+
+<h4>Breaking Up Is Hard To Do</h4>
+
+
+<p>
+Given two positive numbers A and B, where A is not equal to B,
+find a way to <i>break up</i> the larger of the two numbers (call it A)
+into B unequal pieces. For example, if A = 34 and B = 4, then four
+unequal pieces of A are 6, 7, 9 and 12. These are unequal because
+there are no duplicate numbers. They break up (or sum up to) 34
+because 6 + 7 + 9 + 12 = 34. The numbers representing the pieces
+(e.g., 6, 7, 9 and 12) must be positive integers (1, 2, 3, etc.),
+which excludes zero.  Note that some pairs of numbers don't work,
+e.g., 5 and 3. Omit the uninteresting part of the algorithm, that
+is, the part that would enforce the assumption that A is larger
+than B.
+</p>
+
+<h4>What Is The Answer?</h4>
+
+
+<p>
+In this new version of Scrabble ...
+</p>
+<ul>
+<li>
+Letter values are all positive integers (zero not allowed).
+</li>
+<li>
+Each vowel has a different numeric value.
+</li>
+<li>
+Each consonant has a different numeric value.
+</li>
+<li>
+A vowel can have the same value as a consonant.
+</li>
+<li>
+Word scores are computed by adding up the vowel values, adding up the consonant values, and multiplying these two sums together.
+
+</li>
+</ul>Given these word scores ...
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<COL align="left"><COL align="left"><COL align="right"><COL align="left"><COL align="left"><COL align="left"><COL align="left"><COL align="left"><COL align="left"><COL align="left"><COL align="left"><COL align="left"><COL align="left">
+<tbody>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>PLUM</td><td>=</td><td>36</td><td></td><td></td><td>PLUME</td><td>=</td><td>48</td><td></td><td></td><td>MELT</td><td>=</td><td>15</td></tr>
+<tr><td>ROME</td><td>=</td><td>98</td><td></td><td></td><td>SAVE</td><td>=</td><td>51</td><td></td><td></td><td>WEST</td><td>=</td><td>20</td></tr>
+<tr><td>LAME</td><td>=</td><td>18</td><td></td><td></td><td>PLANE</td><td>=</td><td>39</td><td></td><td></td><td>VIPER</td><td>=</td><td>150</td></tr>
+<tr><td>PIPER</td><td>=</td><td>110</td><td></td><td></td><td>OUT</td><td>=</td><td>81</td><td></td><td></td><td>GREET</td><td>=</td><td>40</td></tr>
+<tr><td>MELBA</td><td>=</td><td>51</td><td></td><td></td><td>WESTERN</td><td>=</td><td>70</td><td></td><td></td><td>PAPER</td><td>=</td><td>66</td></tr>
+</tbody>
+</table>
+
+
+<p>
+... what is the score of the following "word"?
+</p>
+<p>
+<code>PROBLEMSOLVING</code>
+</p>
+
+<h4>What Is The Question?</h4>
+
+
+<p>
+Whatever it is, it was inspired by the <a href="http://scriptures.lds.org/en/abr/fac_2">Book of Abraham, Facsimile No. 2, explanation of Figure 11</a>.
+</p>
+<p>
+<i>If the student can find out these numbers, so let it be ...</i>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<COL align="right">
+<tbody>
+<tr><td>8247830262</td></tr>
+<tr><td>7812996882</td></tr>
+<tr><td>1363377798</td></tr>
+<tr><td>1314834207</td></tr>
+<tr><td>2153753129</td></tr>
+<tr><td>6332798584</td></tr>
+<tr><td>4378329335</td></tr>
+<tr><td>8483580777</td></tr>
+<tr><td>9899336077</td></tr>
+<tr><td>3201725555</td></tr>
+</tbody>
+</table>
+
+
+
+<h3>Expectations</h3>
+
+
+<p>
+You can write pseudocode or even real code if you wish, but the main
+product of this exploration is a report that describes at a high level
+each algorithm, especially how you and it solved these three problems.
+Include your analysis of each approach and a discussion of the various
+criteria you discovered <i>or created</i> by which to evaluate each approach.
+</p>
+<p>
+You are expected to write a good introduction (stating the goal of
+this activity) and conclusion (summarizing your analysis), and use
+correct grammar and spelling throughout.
+</p>
+<p>
+You are also expected to use <b>org mode</b> to write your report.
+</p>
+
+<h3>Questions</h3>
+
+
+
+<h4>Problem 3</h4>
+
+
+<p>
+I will do my best to imitate Dr. Lanning's hologram program:
+</p>
+<p>
+A "Type 1" (abbreviated by holding up 1 finger) question elicits
+the response: "I'm sorry, my responses are limited. You must ask
+the right TYPE of question."
+</p>
+<ul>
+<li>
+Are those numbers supposed to be inputs to be consumed or are they outputs to be produced?
+</li>
+<li>
+What type of data are we looking at producing?
+</li>
+<li>
+Is the entire number significant, or is each digit significant?
+</li>
+<li>
+Are they different numbers or one long number?
+</li>
+<li>
+Have we experimented with this before?
+</li>
+<li>
+If so, what was it?
+</li>
+<li>
+If not, why not?
+</li>
+<li>
+How does elisp help us solve this problem?
+</li>
+<li>
+What is the outcome for students Brother Neff is looking for?
+</li>
+<li>
+Is it possible that there is no efficient way of finding the solution,
+except for asking Brother Neff what the solution is?
+</li>
+<li>
+What is the algorithmic complexity of the algorithm?
+</li>
+<li>
+Once we know that our questions are of Type 2, how do we find their answers?
+</li>
+<li>
+Is the algorithm based on the Book of Abraham Facsimile #2 in any way, or something else?
+
+</li>
+</ul>A "Type 2" (2 fingers) question elicits the response: "That, dear
+student (detective), is the right TYPE of question."
+
+<ul>
+<li>
+Is it a matrix?
+</li>
+<li>
+Is it safe to assume these numbers are in base 10?
+</li>
+<li>
+Is there only one correct answer?
+</li>
+<li>
+Is there something we can use to check to see if we have the right answer?
+</li>
+<li>
+Do you have to do arithmetic with these numbers?
+</li>
+<li>
+Is there a topological ordering to the numbers?
+</li>
+<li>
+Was the function that generated the numbers one-way?
+</li>
+<li>
+Does Brother Neff enjoy making his students think?
+</li>
+<li>
+Does this question get solved all the time?
+</li>
+<li>
+Is there another source that would assist us in solving this?
+</li>
+<li>
+Is this question at all related to the previous questions?
+</li>
+<li>
+Is Brother Neff actually going to answer any of these questions?
+</li>
+<li>
+Does the process to solve this problem have any relation to something specific in discrete math?
+</li>
+<li>
+Is the output of our algorithm to be a question?
+</li>
+<li>
+Would Brother Neff call the solution method a meta-algorithm?
+</li>
+<li>
+Does the solution require a Godel-Escher-Bach-style algorithm?
+</li>
+<li>
+Is the output human readable?
+</li>
+<li>
+Are there more than just Type 1 or Type 2 questions?
+
+</li>
+</ul>A Type 3 question elicits the response: "That, dear student (detective), is THE RIGHT question. Program terminated."
+
+
+<h5>Hints:</h5>
+
+
+<p>
+The question has exactly twenty words, all unique (no repeats).
+</p>
+<p>
+No word has more than two syllables.
+</p>
+<p>
+There are no "uncommon" words
+(see <a href="http://firstthreeodds.org/cs306/commonWords.txt">http://firstthreeodds.org/cs306/commonWords.txt</a> for a list of 2300 common words).
+</p>
+<p>
+Half of the words have 4 letters, and of the remaining 10, 7 have 3
+or fewer, and 3 have 5 or more.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<COL align="right"><COL align="right">
+<thead>
+<tr><th>Number of letters</th><th>Number of words having that number of letters</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>10</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>1</td></tr>
+<tr><td>7</td><td>1</td></tr>
+</tbody>
+</table>
+
+
+
+<h3>What is True?</h3>
+
+
+<p>
+(defun what-is-true-about-my-engagement-with-mysteriousness ()
+"If need be, replace a 100 with a smaller number to reflect how much you feel you deserve."
+(vector
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; What is true of my experience in general?                              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["I had fun." 100]
+["I collaborated with the classmates in my cohort." 100]
+["I learned something new." 100]
+["I achieved something meaningful, or something I can build upon at a later time." 100]
+</p>
+<p>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; What is true of my report on what I learned?                            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["I learned the basics of emacs 'org' mode in order to write it." 100]
+["I learned through writing it how to write a little better." 100]
+</p>
+<p>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; What is true of the mechanical "infelicities" (misspelled words,        ;;
+;; grammatical errors, punctuation errors) in my report on what I learned? ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["There are fewer than four." 100]
+["There are fewer than three." 100]
+["There are fewer than two." 100]
+["There are none." 100]
+</p>
+<p>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; What is otherwise true of the quality of the information in my report?  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["Each detail contributes to the report's purpose, with no distracting, extraneous information." 100]
+["There are no unstated assumptions, and the arguments are logical and concise." 100]
+["As confirmed by having someone not in my cohort read it, the reader can readily see what is going on in my head." 100]
+</p>
+<p>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; What is otherwise true of the organization of my report?                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["My report's information is presented in a logical sequence, easily followed." 100]
+["My report has a strong introduction, clearly stating the goal of this exploration." 100]
+["My report has a strong conclusion, summarizing my analysis." 100]
+["My report has pithy headings to guide the information flow." 100]
+["The information flow in my report has engaging transitions that entice the reader to read further." 100]
+</p>
+<p>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; What is true about my meeting explicit requirements?                    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["I discussed my algorithms only at a high level, avoiding tedious descriptions of their details." 100]
+["I discovered/created/reported on one explicit compare/contrast criterion for Problem 1." 100]
+["I discovered/created/reported on two explicit compare/contrast criteria for Problem 1." 100]
+["I discovered/created/reported on three explicit compare/contrast criteria for Problem 1." 100]
+["I discovered/created/reported on one explicit compare/contrast criterion for Problem 2." 100]
+["I discovered/created/reported on two explicit compare/contrast criteria for Problem 2." 100]
+["I discovered/created/reported on three explicit compare/contrast criteria for Problem 2." 100]
+["I discovered/created/reported on one explicit compare/contrast criterion for Problem 3." 100]
+["I discovered/created/reported on two explicit compare/contrast criteria for Problem 3." 100]
+["I discovered/created/reported on three explicit compare/contrast criteria for Problem 3." 100]
+</p>
+<p>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; On page 103 of his book <i>The Sense of Style</i>, Steven Pinker said:        ;;
+;;                                                                          ;;
+;; As with any form of mental self-improvement, you must learn to turn      ;;
+;; your gaze inward, concentrate on processes that usually run              ;;
+;; automatically, and try to wrest control of them so that you can apply    ;;
+;; them more mindfully.                                                     ;;
+;;                                                                          ;;
+;; What is true about the introspection I did in coming up with algorithmic ;;
+;; solutions to these problems, especially the third?                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["For Problem 1, I learned to apply more mindfully mental processes that usually run automatically." 100]
+["For Problem 1, I supplied ample evidence of my introspection." 100]
+["For Problem 2, I learned to apply more mindfully mental processes that usually run automatically." 100]
+["For Problem 2, I supplied ample evidence of my introspection." 100]
+["For Problem 3, I learned to apply more mindfully mental processes that usually run automatically." 100]
+["For Problem 3, I supplied ample evidence of my introspection by discussing metacognitive miscalibration, and the orders of ignorance." 100]
+</p>
+<p>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; As quoted in J. Hartmanis <i>On computational complexity and the nature     ;; ;; of computer science</i> published in the <i>Communications of the ACM 37</i>,     ;;
+;; 10 (1994), 39, Donald Knuth said:                                         ;;
+;;                                                                           ;;
+;; Computer Science and Engineering is a field that attracts a different     ;;
+;; kind of thinker. I believe that one who is a natural computer             ;;
+;; scientist thinks algorithmically. Such people are especially good at      ;;
+;; dealing with situations where different rules apply in different          ;;
+;; cases; they are individuals who can rapidly change levels of abstraction, ;;
+;; simultaneously seeing things "in the large" and "in the small."           ;;
+;;                                                                           ;;
+;; What is true about my algorithmic thinking, or aspirations thereto?       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</p>
+<p>
+["I discussed to what extent I am or desire to get good at dealing with situations where different rules apply in different cases." 100]
+["I discussed to what extent I am or desire to be able to rapidly change levels of abstraction." 100]
+["I discussed to what extent I can or desire to simultaneously see things in the large and in the small." 100]
+</p>
+<p>
+))
+</p><p class="author"> Author: Rick Neff
+<a href="mailto:NeffR@byui.edu">&lt;NeffR@byui.edu&gt;</a>
+</p>
+<p class="date"> Date: 2015/10/10 11:32:52</p>
+</body>
+</html>
