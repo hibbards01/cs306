@@ -1,0 +1,24 @@
+// Scrabble ehigh-level algorithm (brute-force)
+SET words = characters and single word-value
+SET vowels = values we found to be true
+SET consonants = 0, 1, 2, 3, 4, etc.
+
+FUNCTION checkWords(words, vowels, consonants)
+  // Loop through words
+  FOR each word, until all the words, by 1
+
+    // Check if aritmetic from vowels and consonant values match up with
+    // the word value.
+    FOR each letter in word, until end of word, by 1 character
+
+      consonantSum = sum of all consonants in the word
+      vowelSum = sum of all consonants in the word
+      wordValue = consonant sum * vowelSum
+
+      IF wordValue != the word's total value
+
+        // Go through the vowels and consonant values and change them,
+        // then check again.
+        changeLetterValues(vowels, consonants)
+
+END
