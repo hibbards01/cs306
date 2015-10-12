@@ -1,0 +1,12 @@
+-*- mode: org -*-
+#+AUTHOR Palmer Cluff
+#+DATE 2015-10-12 Mon
+#+PROJECT Exploration 2
+
+* n log n
+Quicksort
+Merge sort
+
+* n^2 
+Bubble sort
+Insertion sort

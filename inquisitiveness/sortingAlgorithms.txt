@@ -1,7 +1,0 @@
-***n log n***
-Quicksort
-Merge sort
-
-***n^2***
-Bubble sort
-Insertion sort
