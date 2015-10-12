@@ -1,0 +1,100 @@
+-*- mode: org -*-
+#+TITLE: Inquisitiveness
+#+AUTHOR: Rick Neff
+#+EMAIL:  NeffR@byui.edu
+#+LANGUAGE:  en
+#+OPTIONS:   H:4 num:nil toc:nil \n:nil @:t ::t |:t ^:t *:t TeX:t LaTeX:t
+
+* EN10
+
+  You are invited to inquisitively evaluate algorithm efficiency using
+  Big-Oh *and* empirical measurements. This invitation to exploration
+  is codenamed /Inquisitiveness/.
+
+** Background
+
+   - /Empirical/ means based on experimental data, not on a theory.
+   - It means originating in or based upon observation or experience;
+     capable of being verified or disproved by observation or
+     experiment;
+   - It is derived from observation, experience or experiment rather
+     than from conjecture, hypothesis or theory.
+
+   So, empirical information is based on perception with the five
+   senses rather than thinking and rationalism. In other words, it is
+   based on /practical/ experience. It is often called /benchmarking/.
+
+*** General Plan for Empirical Experimentation
+
+    1. Understand the experiment's purpose.
+    2. Decide on the efficiency metric *M* to be measured and the
+       measurement unit (an operation's count or a time unit).
+    3. Decide on characteristics of the input sample (its range,
+       size, and so on).
+    4. Prepare a program implementing the algorithm (or
+       algorithms) for the experimentation.
+    5. Generate a sample of inputs.
+    6. Run the algorithm (or algorithms) on the sample's inputs
+       and record the data observed.
+    7. Analyze the data obtained.
+
+*** Important Points
+
+    Three points to bear in mind when analyzing algorithm efficiency
+    empirically in the context of this exploration:
+
+    1. You are *not* given specific algorithms to measure and compare,
+       just specific algorithm *types*.
+    2. You thus have great latitude in how to conduct and report on
+       your experiments, so use your cohort collaboration to the max.
+    3. You may study/use any code found in http://firstthreeodds.org/cs306/empirical.zip
+
+** Requirements
+
+   Implement two "n-squared" sorting algorithms and two "n log n"
+   algorithms of your choice using any language you choose (mixing languages
+   if you choose, but see the questions below). Analyze the four algorithms
+   and show how you found the running times for each. Do an empirical
+   measurement of the running times on each of the four algorithms and
+   compare the results with the theoretical running time. When doing the
+   empirical measurements, you will probably need to loop over most
+   problem sizes several times so they produce measurable run times.
+   Make available all code and scripts you use to obtain the running times.
+
+   For maximum benefit, treat this as an open-ended project, and
+   explore some additional factors affecting runtime. For example,
+   answer these questions, and then some:
+
+   1. How does the language (Java, C++, etc.),
+      including compiler switches, affect performance?
+   2. How does the data type (*int*, *float*, etc.) to be sorted
+      affect performance?
+   3. When does overhead from recursion affect performance?
+   4. How does the operating system affect the performance of the algorithms? 
+   5. How do the theoretical running time and the empirical running time
+      compare? If they are different, why are they different?
+   6. How does optimization of a compiler affect performance?
+   7. What are the pros and cons of each algorithm based on
+      the theoretical and the empirical analysis?
+   8. Are there situations where a slow algorithm is acceptable to use
+      in an application?
+   9. Are there situations where a fast algorithms might be the only option?
+
+** Expectations
+
+   - Do work that you can take pride in reporting on.
+   - Make your report look and feel professional --- which for starters
+     means to eradicate all mechanical infelicities.
+   - Include an introduction (clearly stating the goal(s) of this
+     activity) and a conclusion (summarizing the analysis).
+   - Mention the hardware, compiler, timers used, and any and all
+     assumptions made.
+   - *Be specific* about what the best case,
+     average case, and worst case are for each algorithm.
+   - Include a comparison of timings for each sort. It's acceptable
+     and desirable to plot your timings for multiple sorts on the same
+     graph, but also include a table of your timings.
+   - Include a comparison of the two "n-squared" algorithms and a
+     comparison of the two "n log n" algorithms, but *NOT* a
+     comparison of an "n-squared" with an "n log n" algorithm, which
+     doesn't make sense.
