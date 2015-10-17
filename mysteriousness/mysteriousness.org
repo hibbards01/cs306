@@ -6,6 +6,7 @@
 * Mysteriousness
 ** Problem 1
 
+
 ** Problem 2
    
    | word    | vowels | consonants | score | notes |
@@ -71,4 +72,34 @@
 ** Problem 3
 *** Pseudocode
 SET words = to the 2300 words
+
+// Get rid of some words
 SET words = removeWordsMoreThan2Syllables(words)
+
+// Loop through the combinations of 20 words
+SET questions = Array()
+FOR combination IN words
+
+  // Loop through all the permutations of the combination
+  SET betterQuestion = ""
+  FOR permutation in combination
+
+     // Grab the question if empty
+     IF bestQuestion is empty
+        SET betterQuestion = permutation
+     ELSE
+        // Save only the best question
+        SET betterQuestion = whichQuestionIsBetter(permutation, betterQuestion)
+  END
+  
+  // Save to the array
+  SET questions.push_back(betterQuestion)
+END
+
+// Now loop through through the questions and find the best question
+SET bestQuestion = questions[0]
+FOR question + 1 UNTIL questions
+  bestQuestion = whichQuestionIsBetter(question, bestQuestion)
+END
+
+PUT bestQuestion
