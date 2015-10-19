@@ -3,7 +3,8 @@ SET words = characters and single word-value
 SET vowels = values we found to be true
 SET consonants = 0, 1, 2, 3, 4, etc.
 
-FUNCTION checkWords(words, vowels, consonants)
+FUNCTION checkWordsAndLetters(words, vowels, consonants)
+  
   // Loop through words
   FOR each word, until all the words, by 1
 
@@ -20,5 +21,11 @@ FUNCTION checkWords(words, vowels, consonants)
         // Go through the vowels and consonant values and change them,
         // then check again.
         changeLetterValues(vowels, consonants)
+
+    // Now check the word PROBLEMSOLVING to see if values of characters
+    // make the correct value for PROBLEMSOLVING
+    FOR each letter in PROBLEMSOLVING, until end of word, by 1 character
+
+      checkWordsAndLetters(words, vowels, consonants)
 
 END
