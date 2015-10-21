@@ -11,7 +11,18 @@
 
 // Include the right files.
 #include <iostream>
+#include <cassert>
+#include <time.h>
+#include <stdlib.h>
 using namespace std;
+
+// For debugging purposes.
+// To output debug type in command line: g++ -DSHOW <file>
+#ifdef SHOW
+#define Debug(x) x
+#else
+#define Debug(x)
+#endif
 
 /*************************************
 * merge
@@ -20,6 +31,61 @@ using namespace std;
 *************************************/
 void merge(int array[], int first, int middle, int last)
 {
+    // Grab the sizes of the two arrays
+    int size1 = middle - first + 1;
+    int size2 = last - middle;
+
+    // Now make copy's of these arrays
+    int * lhArray = new int[size1];
+    int * rhArray = new int[size2];
+    for (int i = 0; i < size1; ++i)
+    {
+        lhArray[i] = array[first + i];
+    }
+
+    for (int i = 0; i < size2; ++i)
+    {
+        rhArray[i] = array[middle + 1 + i];
+    }
+
+    // Now merge them
+    int index1 = 0;
+    int index2 = 0;
+    int index = first;
+
+    while (index1 < size1 && index2 < size2)
+    {
+        // See if lh is less then rh
+        if (lhArray[index1] <= rhArray[index2])
+        {
+            array[index] = lhArray[index1++];
+        }
+        else
+        {
+            array[index] = rhArray[index2++];
+        }
+
+        // Increment the array!
+        ++index;
+    }
+
+    // Grab the left overs
+    // First the left side
+    while (index1 < size1)
+    {
+        array[index++] = lhArray[index1++];
+    }
+
+    // Now the right side
+    while (index2 < size2)
+    {
+        array[index++] = rhArray[index2++];
+    }
+
+    // Delete the temporary arrays
+    delete [] lhArray;
+    delete [] rhArray;
+
     return;
 }
 
@@ -31,6 +97,22 @@ void merge(int array[], int first, int middle, int last)
 *************************************/
 void mergeSort(int array[], int first, int last)
 {
+    // Make sure that first is less then last
+    if (first < last)
+    {
+        // Grab the middle of the array
+        int middle = (first + (last - 1)) / 2;
+
+        // Now call yourself and divide the first half
+        mergeSort(array, first, middle);
+
+        // And do it to the other side
+        mergeSort(array, middle + 1, last);
+
+        // Finally merge them together
+        merge(array, first, middle, last);
+    }
+
     return;
 }
 
@@ -55,21 +137,36 @@ int random(int min, int max)
 *************************************/
 int main(int argc, char const *argv[])
 {
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+
     // Create 100 random numbers
-    int array[100];
-    for (int i = 0; i < 100; ++i)
+    int * array = new int[100000000];
+    for (int i = 0; i < 100000000; ++i)
     {
-        array[i] = random(1, 100);
+        array[i] = random(1, 100000000);
     }
 
+    // See how long it takes
+    clock_t t;
+
     // Now sort them!
-    mergeSort(array, 0, 100);
+    t = clock();
+    mergeSort(array, 0, 99999999);
+    t = clock() - t;
 
     // Now show the array
-    for (int i = 0; i < 100; ++i)
+#ifdef SHOW
+    for (int i = 0; i < 100000000; ++i)
     {
         cout << array[i] << " ";
     }
-    cout << endl;
+    cout << endl << endl;
+#endif
+    // Delete the memory
+    delete [] array;
+
+    cout << "Program took " << (((float)t)/CLOCKS_PER_SEC) << " seconds\n";
+
     return 0;
 }
