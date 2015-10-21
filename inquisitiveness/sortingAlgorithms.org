@@ -4,9 +4,9 @@
 #+PROJECT Exploration 2
 
 * n log n
-Quicksort
+Quicksort - Palmer
 Merge sort
 
 * n^2 
-Bubble sort
-Insertion sort
+Bubble sort - Palmer
+Insertion sort - Spenser
