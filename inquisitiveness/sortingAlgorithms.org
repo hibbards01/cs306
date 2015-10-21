@@ -9,4 +9,4 @@ Merge sort
 
 * n^2 
 Bubble sort - Palmer
-Insertion sort
+Insertion sort - Spenser
