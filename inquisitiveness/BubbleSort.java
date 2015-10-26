@@ -6,6 +6,7 @@ public class BubbleSort {
 	System.out.print("Array before it is sorted: ");
 	for (int i = 0; i < 10; i++) {
 	    System.out.print(array[i]);
+	    System.out.print(' ');
 	}
 	System.out.println();
 	
@@ -14,6 +15,7 @@ public class BubbleSort {
 	System.out.print("Array after it is sorted : ");
 	for (int i = 0; i < 10; i++) {
 	    System.out.print(array[i]);
+	    System.out.print(' ');
 	}
 	System.out.println();
     }
