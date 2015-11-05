@@ -141,10 +141,10 @@ int main(int argc, char const *argv[])
     cout.setf(ios::showpoint);
 
     // Create 100 random numbers
-    int * array = new int[100000000];
-    for (int i = 0; i < 100000000; ++i)
+    int * array = new int[2000000];
+    for (int i = 0; i < 2000000; ++i)
     {
-        array[i] = random(1, 100000000);
+        array[i] = random(1, 2000000);
     }
 
     // See how long it takes
@@ -152,7 +152,7 @@ int main(int argc, char const *argv[])
 
     // Now sort them!
     t = clock();
-    mergeSort(array, 0, 99999999);
+    mergeSort(array, 0, 1999999);
     t = clock() - t;
 
     // Now show the array
