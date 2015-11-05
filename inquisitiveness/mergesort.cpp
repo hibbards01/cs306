@@ -102,7 +102,6 @@ void mergeSort(int array[], int first, int last)
     {
         // Grab the middle of the array
         int middle = (first + (last - 1)) / 2;
-
         // Now call yourself and divide the first half
         mergeSort(array, first, middle);
 
