@@ -14,6 +14,7 @@
 #include <cassert>
 #include <time.h>
 #include <stdlib.h>
+#include <fstream>
 using namespace std;
 
 // For debugging purposes.
@@ -131,6 +132,31 @@ int random(int min, int max)
 }
 
 /*************************************
+* readFile
+*************************************/
+void readFile(int * array, int size)
+{
+    // Read from the file.
+    ifstream fin("randomNumbers.txt");
+
+    // Make sure it worked
+    if (fin.fail())
+    {
+        cout << "ERROR in reading file: randomNumbers.txt\n";
+        return;
+    }
+
+    // Now read them
+    for (int i = 0; i < size; ++i)
+    {
+        fin >> array[i];
+    }
+
+    // Now close the file
+    fin.close();
+}
+
+/*************************************
 * main
 *   Driver program.
 *************************************/
@@ -142,10 +168,10 @@ int main(int argc, char const *argv[])
     // Create 100 random numbers
     int size = 10000000;
     int * array = new int[size];
-    for (int i = 0; i < size; ++i)
-    {
-        array[i] = random(1, size);
-    }
+    // for (int i = 0; i < size; ++i)
+    // {
+    //     array[i] = random(1, size);
+    // }
 
     // See how long it takes
     clock_t t;
