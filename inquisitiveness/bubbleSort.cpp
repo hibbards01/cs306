@@ -5,6 +5,7 @@
  *******************************************************/
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 /***********************************
@@ -31,21 +32,31 @@ void bubbleSort(int arr[], int n) {
 
 int main()
 {
-  int array[] = {5, 3, 8, 2, 1, 4, 7, 6, 10, 9};
+  int num = 10000000;
+  //int array[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+  int *array = new int[10000000];
+  ifstream myFile("randomNumbers.txt");
+  
+  for(int i = 0; i < num; i++) 
+    {
+      myFile >> array[i];
+    }
+  myFile.close();
 
-  cout << "Array before it is sorted: ";
-  for (int i = 0; i < 10; i++) {
-    cout << array[i] << ' ';
-  }
-  cout << endl;
+  // cout << "Array before it is sorted: ";
+  // for (int i = 0; i < num; i++) {
+  //   cout << array[i] << ' ';
+  // }
+  // cout << endl;
 
-  bubbleSort(array, 10);
+  bubbleSort(array, num);
 
-  cout << "Array after it is sorted : ";
-  for (int i = 0; i < 10; i++) {
-    cout << array[i] << ' ';
-  }
-  cout << endl;
-
+  // cout << "Array after it is sorted : ";
+  // for (int i = 0; i < num; i++) {
+  //   cout << array[i] << ' ';
+  // }
+  // cout << endl;
+  cout << "Done!\n";
+  delete[] array;
   return 0;
 }
