@@ -33,8 +33,6 @@ int main()
 	fin >> next;
       }
 
-    cout << "Done reading in file.\n";
-
     insertion_sort(data, data.size());
 
     for (std::vector<int>::iterator it = data.begin() ; it != data.end(); ++it)
