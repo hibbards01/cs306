@@ -5,6 +5,9 @@
  *******************************************************/
 
 #include <iostream>
+#include <cassert>
+#include <time.h>
+#include <stdlib.h>
 #include <fstream>
 using namespace std;
 
@@ -34,7 +37,7 @@ int main()
 {
   int num = 10000000;
   //int array[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-  int *array = new int[10000000];
+  int *array = new int[num];
   ifstream myFile("randomNumbers.txt");
   
   for(int i = 0; i < num; i++) 
@@ -49,14 +52,17 @@ int main()
   // }
   // cout << endl;
 
+  clock_t t;
+  t = clock();
   bubbleSort(array, num);
-
+  t = clock() - t;
   // cout << "Array after it is sorted : ";
   // for (int i = 0; i < num; i++) {
   //   cout << array[i] << ' ';
   // }
   // cout << endl;
-  cout << "Done!\n";
+
   delete[] array;
+  cout << "Program took " << (((float)t)/CLOCKS_PER_SEC) << " seconds\n";
   return 0;
 }

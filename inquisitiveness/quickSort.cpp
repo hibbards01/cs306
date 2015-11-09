@@ -5,6 +5,10 @@
  *******************************************************/
 
 #include <iostream>
+#include <cassert>
+#include <time.h>
+#include <stdlib.h>
+#include <fstream>
 using namespace std;
 
 void quickSort(int arr[], int left, int right) {
@@ -41,21 +45,35 @@ void quickSort(int arr[], int left, int right) {
 
 int main()
 {
-  int array[] = {5, 3, 8, 2, 1, 4, 7, 6, 10, 9};
+  int num = 10000000;
+  //int array[] = {5, 3, 8, 2, 1, 4, 7, 6, 10, 9};
+  int *array = new int[num];
 
-  cout << "Array before it is sorted: ";
-  for (int i = 0; i < 10; i++) {
-    cout << array[i] << ' ';
-  }
-  cout << endl;
+  ifstream myFile("randomNumbers.txt");  
+  for(int i = 0; i < num; i++) 
+    {
+      myFile >> array[i];
+    }
+  myFile.close();
 
-  quickSort(array, 0, 9);
+  // cout << "Array before it is sorted: ";
+  // for (int i = 0; i < 10; i++) {
+  //   cout << array[i] << ' ';
+  // }
+  // cout << endl;
+  clock_t t;
+  t = clock();
+  quickSort(array, 0, num - 1);
+  t = clock() - t;
+  // cout << "Array after it is sorted : ";
+  // for (int i = 0; i < 10; i++) {
+  //   cout << array[i] << ' ';
+  // }
+  // cout << endl;
 
-  cout << "Array after it is sorted : ";
-  for (int i = 0; i < 10; i++) {
-    cout << array[i] << ' ';
-  }
-  cout << endl;
+  delete[] array;
+
+  cout << "Program took " << (((float)t)/CLOCKS_PER_SEC) << " seconds\n";
 
   return 0;
 }
