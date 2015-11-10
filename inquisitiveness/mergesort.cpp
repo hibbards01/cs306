@@ -15,6 +15,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <fstream>
+#include <string>
 using namespace std;
 
 // For debugging purposes.
@@ -134,10 +135,10 @@ int random(int min, int max)
 /*************************************
 * readFile
 *************************************/
-void readFile(int * array, int size)
+void readFile(int * array, int size, string file)
 {
     // Read from the file.
-    ifstream fin("randomNumbers.txt");
+    ifstream fin(file.c_str());
 
     // Make sure it worked
     if (fin.fail())
@@ -165,34 +166,44 @@ int main(int argc, char const *argv[])
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
 
-    // Create 100 random numbers
-    int size = 10000000;
-    int * array = new int[size];
-    // for (int i = 0; i < size; ++i)
-    // {
-    //     array[i] = random(1, size);
-    // }
-
-    // See how long it takes
-    clock_t t;
-
-    // Now sort them!
-    t = clock();
-    mergeSort(array, 0, size - 1);
-    t = clock() - t;
-
-    // Now show the array
-#ifdef SHOW
-    for (int i = 0; i < size; ++i)
+    // Grab the file
+    if (argc > 1)
     {
-        cout << array[i] << " ";
-    }
-    cout << endl << endl;
-#endif
-    // Delete the memory
-    delete [] array;
+        // Grab file
+        string file = argv[1];
 
-    cout << "Program took " << (((float)t)/CLOCKS_PER_SEC) << " seconds\n";
+        // Create 100 random numbers
+        int size = 10000000;
+        int * array = new int[size];
+
+        // Now read it
+        readFile(array, size, file);
+
+        // See how long it takes
+        clock_t t;
+
+        // Now sort them!
+        t = clock();
+        mergeSort(array, 0, size - 1);
+        t = clock() - t;
+
+        // Now show the array
+    #ifdef SHOW
+        for (int i = 0; i < size; ++i)
+        {
+            cout << array[i] << " ";
+        }
+        cout << endl << endl;
+    #endif
+        // Delete the memory
+        delete [] array;
+
+        cout << "Program took " << (((float)t)/CLOCKS_PER_SEC) << " seconds\n";
+    }
+    else
+    {
+        cout << "ERROR: You must provide a file in the command arguments.\n";
+    }
 
     return 0;
 }

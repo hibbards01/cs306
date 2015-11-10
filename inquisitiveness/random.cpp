@@ -18,17 +18,16 @@ int main()
 {
   int size = 10000000;
   int * array = new int[size];
-  string file = "randomNumbers.txt";
+  string file = "worst.txt";
 
   ofstream fout(file.c_str());
 
   if (fout.fail())
     cout << "ERROR\n";
 
-  for (int i = 0; i < size; ++i)
+  for (int i = size; i > 0; --i)
     {
-      int num = random(0, size);
-      fout << num << endl;
+      fout << i << endl;
     }
 
   fout.close();
