@@ -37,7 +37,7 @@ public class QuickSort {
 	// }
 	// System.out.println();
 
-	System.out.println("Program took " + ((endTime - startTime) / 1000000) + " miliseconds.");
+	System.out.println("Program took " + (((endTime - startTime) / 1000000) / 1000) + " seconds.");
     }
 
     public static List<Integer> readFile(List<Integer> list) {
