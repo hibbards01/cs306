@@ -1,0 +1,19 @@
+Script started on Tue Nov 10 18:39:33 2015
+[?1034hbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ ls
+BubbleSort.class	best.txt		mergesort.cpp
+BubbleSort.java		bubbleSort		quickSort
+MergeSort.class		bubbleSort.cpp		quickSort.cpp
+MergeSort.jar		empirical		random.cpp
+MyInsertionSort.class	inquisitiveness.html	script.sh
+MyInsertionSort.java	inquisitiveness.org	sortingAlgorithms.org
+QuickSort.class		insertionSort		typescript
+QuickSort.java		insertionSort.cpp	worst.txt
+average.txt		mergeSort
+bash-3.2$ exit
+exit
+
+Script done on Tue Nov 10 18:39:45 2015
