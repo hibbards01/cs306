@@ -36,9 +36,7 @@ public class MyInsertionSort {
 	//  System.out.println(s);
 	//}
 
-        Integer[] input = new Integer[] { 4, 2, 9, 6, 23, 12, 34, 0, 1 };
 	long startTime = System.nanoTime();
-
         insertionSort(tempsArray);
 	long endTime = System.nanoTime();
 
@@ -65,6 +63,6 @@ public class MyInsertionSort {
             array[i+1] = key;
 
 	    }
-            printNumbers(array);
+		//printNumbers(array);
     }
 }
