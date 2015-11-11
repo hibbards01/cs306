@@ -12,18 +12,33 @@ echo "------------------"
 echo "Quicksort:"
 echo "C++: "
 g++ -o quickSort quickSort.cpp
-./quickSort
+echo "Best: "
+./quickSort best.txt
+echo "Average: "
+./quickSort average.txt
+echo "Worst: "
+./quickSort worst.txt
 
 echo "Java: "
 javac QuickSort.java
-java QuickSort
+echo "Best: "
+java QuickSort best.txt
+echo "Average: "
+java QuickSort average.txt
+echo "Worst: "
+java QuickSort worst.txt
 
 echo
 
 echo "Merge Sort:"
 echo "C++: "
 g++ -o mergeSort mergesort.cpp
-./mergeSort
+echo "Best: "
+./mergeSort best.txt
+echo "Average: "
+./mergeSort average.txt
+echo "Worst: "
+./mergeSort worst.txt
 
 echo "Java: "
 java -jar MergeSort.jar
@@ -36,19 +51,39 @@ echo "--------------"
 echo "Insertion Sort:"
 echo "C++: "
 g++ -o insertionSort insertionSort.cpp
-./insertionSort
+echo "Best: "
+./insertionSort best.txt
+echo "Average: "
+./insertionSort average.txt
+echo "Worst: "
+./insertionSort worst.txt
 
 echo "Java: "
 javac MyInsertionSort.java
-java MyInsertionSort
+echo "Best: "
+java MyInsertionSort best.txt
+echo "Average: "
+java MyInsertionSort average.txt
+echo "Worst: "
+java MyInsertionSort worst.txt
 
 echo
 
 echo "Bubble Sort: "
 echo "C++: "
 g++ -o bubbleSort bubbleSort.cpp
-./bubbleSort
+echo "Best: "
+./bubbleSort best.txt
+echo "Average: "
+./bubbleSort average.txt
+echo "Worst: "
+./bubbleSort worst.txt
 
 echo "Java: "
 javac BubbleSort.java
-java BubbleSort
+echo "Best: "
+java BubbleSort best.txt
+echo "Average: "
+java BubbleSort average.txt
+echo "Worst: "
+java BubbleSort worst.txt
