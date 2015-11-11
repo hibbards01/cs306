@@ -44,9 +44,9 @@ echo "Java: "
 echo "Best: "
 java -jar MergeSort.jar best.txt
 echo "Average: "
-ava -jar MergeSort.jar average.txt
+java -jar MergeSort.jar average.txt
 echo "Worst: "
-ava -jar MergeSort.jar worst.txt
+java -jar MergeSort.jar worst.txt
 
 
 echo
