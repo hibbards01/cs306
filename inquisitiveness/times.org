@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 | Computer           | Processor         | Language | Algorithm      | Best         | Average     | Worst       |
 |--------------------+-------------------+----------+----------------+--------------+-------------+-------------|
 | Sam's Computer     | 2.5 GHz Duo Core  | Cpp      | QuickSort      | 0.540796 s   | 1.75573 s   | 0.548161 s  |
@@ -16,3 +17,15 @@
 |                    |                   | Java     | InsertionSort  | 1 milisecond | SAME AS SAM | SAME AS SAM |
 |                    |                   | Cpp      | BubbleSort     | 0.02366 s    | SAME AS SAM | SAME AS SAM |
 |                    |                   | Java     | BubbleSort     | 0 s          | SAME AS SAM | SAME AS SAM |
+=======
+| Computer           | Processor         | Language | Algorithm      | Best       | Average    | Worst      |
+|--------------------+-------------------+----------+----------------+------------+------------+------------|
+| Sam's Computer     | 2.5 GHz Duo Core  | Cpp      | QuickSort      | 0.540796 s | 1.75573 s  | 0.548161 s |
+|                    |                   | Java     | QuickSort      | 0 s        | 1 s        | 0 s        |
+|                    |                   | Cpp      | MergeSort      | 3.596613 s | 4.995936 s | 3.554146 s |
+|                    |                   | Java     | MergeSort      | 6 s        | 12 s       | 6 s        |
+| Spenser's Computer | 2.0 GHz Quad Core | Cpp      | Insertion Sort | 0.056345s  | > 8 hrs.   | > 8 hrs.   |
+|                    |                   | Java     | Insertion Sort | 0 s        | > 8 hrs.   | > 8 hrs.   |
+|                    |                   | Cpp      | Bubble Sort    | 0.022701 s | > 8 hrs.   | > 8 hrs.   |
+|                    |                   | Java     | Bubble Sort    | 0 s        | > 8 hrs.   | > 8 hrs.   |
+>>>>>>> 2e0c7b68af0c3b64e2c5032982e245e834ca355b
