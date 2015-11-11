@@ -22,8 +22,11 @@ public class QuickSort {
 	//     System.out.print(' ');
 	// }
 	// System.out.println();
+	
+	String filename;
+	filename = args[0];
 
-	list = readFile(list);
+	list = readFile(list, filename);
 	int[] array = convertIntegers(list);
 	
 	long startTime = System.nanoTime();
@@ -40,9 +43,9 @@ public class QuickSort {
 	System.out.println("Program took " + (((endTime - startTime) / 1000000) / 1000) + " seconds.");
     }
 
-    public static List<Integer> readFile(List<Integer> list) {
+    public static List<Integer> readFile(List<Integer> list, String filename) {
 	try {
-	    BufferedReader br = new BufferedReader(new FileReader("randomNumbers.txt"));
+	    BufferedReader br = new BufferedReader(new FileReader(filename));
 	    String num;
 	    while ((num = br.readLine()) != null) {
 		list.add(Integer.parseInt(num));

@@ -43,13 +43,12 @@ void quickSort(int arr[], int left, int right) {
  * Run the program
  ***********************************/
 
-int main()
+int main(int argc, char* argv[])
 {
   int num = 10000000;
   //int array[] = {5, 3, 8, 2, 1, 4, 7, 6, 10, 9};
   int *array = new int[num];
-
-  ifstream myFile("randomNumbers.txt");  
+  ifstream myFile(argv[1]);  
   for(int i = 0; i < num; i++) 
     {
       myFile >> array[i];

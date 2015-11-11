@@ -33,12 +33,13 @@ void bubbleSort(int arr[], int n) {
   }  
 }
 
-int main()
+int main(int argc, char* argv[])
 {
   int num = 10000000;
   //int array[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
   int *array = new int[num];
-  ifstream myFile("randomNumbers.txt");
+  cout << argv[1];
+  ifstream myFile(argv[1]);
   
   for(int i = 0; i < num; i++) 
     {
