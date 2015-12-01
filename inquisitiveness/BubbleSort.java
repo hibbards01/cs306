@@ -40,7 +40,12 @@ public class BubbleSort {
 	// }
 	// System.out.println();
 
-	System.out.println("Program took " + (((endTime - startTime) / 1000000) / 1000) + " seconds.");
+	endTime -= startTime;
+	endTime /= 100000000;
+	double time = endTime;
+
+	System.out.printf("Program took %f seconds\n", time);
+	//System.out.println("Program took " + (((endTime - startTime) / 1000000) / 1000) + " seconds.");
     }
 
     public static List<Integer> readFile(List<Integer> list, String filename) {
@@ -86,6 +91,5 @@ public class BubbleSort {
 	  }                
 	  
       }
-      
-    }
+   }
 }

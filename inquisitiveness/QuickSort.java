@@ -30,7 +30,7 @@ public class QuickSort {
 	int[] array = convertIntegers(list);
 	
 	long startTime = System.nanoTime();
-	quickSort(array, 0, size - 1);
+	quickSort(array, 0, array.length - 1);
 	long endTime = System.nanoTime();
 	
 	// System.out.print("Array after it is sorted : ");
@@ -39,8 +39,11 @@ public class QuickSort {
 	//     System.out.print(' ');
 	// }
 	// System.out.println();
+	endTime -= startTime;
+	endTime /= 100000000;
+	double time = endTime;
 
-	System.out.println("Program took " + (((endTime - startTime) / 1000000) / 1000) + " seconds.");
+	System.out.printf("Program took %f seconds\n", time);
     }
 
     public static List<Integer> readFile(List<Integer> list, String filename) {

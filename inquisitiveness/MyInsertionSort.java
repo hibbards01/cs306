@@ -40,7 +40,12 @@ public class MyInsertionSort {
         insertionSort(tempsArray);
 	long endTime = System.nanoTime();
 
-	System.out.println("Program took " + (((endTime - startTime) / 1000000) / 1000) + " miliseconds.");
+	endTime -= startTime;
+	endTime /= 100000000;
+	double time = endTime;
+
+	System.out.printf("Program took %f seconds\n", time);
+	//System.out.println("Program took " + (((endTime - startTime) / 1000000) / 1000) + " miliseconds.");
     }
 
     private static void printNumbers(Integer[] input) {

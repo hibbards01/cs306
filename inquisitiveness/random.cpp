@@ -16,18 +16,19 @@ int random(int min, int max)
 
 int main()
 {
-  int size = 10000000;
+  int size = 100000000;
   int * array = new int[size];
-  string file = "worst.txt";
+  string file = "big.txt";
 
   ofstream fout(file.c_str());
 
   if (fout.fail())
     cout << "ERROR\n";
 
-  for (int i = size; i > 0; --i)
+  for (int i = 0; i < size; ++i)
     {
-      fout << i << endl;
+      int num = random(0, size);
+      fout << num << endl;
     }
 
   fout.close();
