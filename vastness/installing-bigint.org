@@ -1,0 +1,10 @@
+* Get the bigint.el file
+Included in the folder
+
+* Move to a directory
+in my case it's ~/emacs/
+
+* Look for it in your .emacs file
+(add-to-list 'load-path "~/emacs/") in my case
+
+* Should work after that I hope

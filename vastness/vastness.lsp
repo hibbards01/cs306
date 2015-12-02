@@ -54,5 +54,6 @@ biggg ;Will be ([0 0 9 7 8 3 7 2 4 8 1 0 ...] 10)
 ;wraps and fails
 (+ 1 most-positive-fixnum) ;will be -2305843009213693952
 
-; output is correct
-(bigint-to-string (bigint-power-of-two 100)) ;"1267650600228229401496703205376"
+; output is correct will be "1267650600228229401496703205376" instead of 0 now
+(bigint-to-string (bigint-power-of-two 100))
+
