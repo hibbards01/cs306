@@ -1,4 +1,3 @@
-
 #+TITLE: Vastness
 #+AUTHOR: Rick Neff
 #+EMAIL:  NeffR@byui.edu
